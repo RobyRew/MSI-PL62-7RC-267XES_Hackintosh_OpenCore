@@ -20,9 +20,9 @@ EFI folder for booting macOS Catalina 10.15.7 on a MSI PL62 7RC Laptop.
 - No battery management (again, not enough time to do it).
 
 
-# Hackintosh Guide for **Asus FX504GE** and **GD** models
+# Hackintosh Guide for **MSI PL62 7RC-267XES** and maybe similar **7RC** models
 
-**This guide it's updated to OpenCore 0.7.3 and tested on my main device.**
+**This guide it's updated to OpenCore 0.6.4 and tested on my main device.**
 <!-- shields -->
 <div>
     <!-- downloads -->
