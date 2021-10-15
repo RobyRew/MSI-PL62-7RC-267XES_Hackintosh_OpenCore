@@ -1,1 +1,7 @@
-.DS_STORE
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+._*
+opencore-*.txt
+.DS_Store
