@@ -1,46 +1,24 @@
-# MSI-PL62-7RC-OC-Hackintosh
-
-EFI folder for booting macOS Catalina 10.15.7 on a MSI PL62 7RC Laptop.
-
-## Hardware Info & Specs (WIP)
-
-| Part      | Model                                    |
-| --------- | ---------------------------------------- |
-| Processor | Intel i5-7300HQ (4C4T Kaby Lake)         |
-| Memory    | DDR4 SODIMM, Supports Up to 64GB (2x 8G) |
-| Storage   | 1x SATA @ SATA 3.0                       |
-
-## Kexts, Drivers and (WIP)
-
-## Versions (WIP)
-
-# Bugs
-
-- Trackpad PC/2 Synaptic click (physical button and tapping) doesn't work (need more time to fix it).
-- No battery management (again, not enough time to do it).
-
-
 # Hackintosh Guide for **MSI PL62 7RC-267XES** and maybe similar **7RC** models
 
 **This guide it's updated to OpenCore 0.6.4 and tested on my main device.**
 <!-- shields -->
 <div>
     <!-- downloads -->
-    <a href="https://github.com/RobyRew/ASUS-FX504GE-Hackintosh_OpenCore/releases">
-        <img src="https://img.shields.io/github/downloads/RobyRew/ASUS-FX504GE-Hackintosh_OpenCore/total" alt="downloads"/>
+    <a href="https://github.com/RobyRew/MSI-PL62-7RC-267XES_Hackintosh_OpenCore/releases">
+        <img src="https://img.shields.io/github/downloads/RobyRew/MSI-PL62-7RC-267XES_Hackintosh_OpenCore/total" alt="downloads"/>
     </a>
     <!-- version -->
-    <a href="https://github.com/RobyRew/ASUS-FX504GE-Hackintosh_OpenCore/releases/latest">
-        <img src="https://img.shields.io/github/release/RobyRew/ASUS-FX504GE-Hackintosh_OpenCore.svg" alt="latest version"/>
+    <a href="https://github.com/RobyRew/MSI-PL62-7RC-267XES_Hackintosh_OpenCore/releases/latest">
+        <img src="https://img.shields.io/github/release/RobyRew/MSI-PL62-7RC-267XES_Hackintosh_OpenCore.svg" alt="latest version"/>
     </a>
     <!-- platform -->
-    <a href="https://github.com/RobyRew/ASUS-FX504GE-Hackintosh_OpenCore">
+    <a href="https://github.com/RobyRew/MSI-PL62-7RC-267XES_Hackintosh_OpenCore">
         <img src="https://img.shields.io/badge/platform-macOS-lightgrey.svg" alt="platform"/>
     </a>
 </div>
 </br></br>
 
-![Asus FX504GE running macOS Big Sur](/Docs/Images/Asus-FX504-macOS.png)
+![Asus FX504GE running macOS Big Sur](/Docs/Images/MSI-PL62-7RC-267XES-macOS.png)
 
 [Amazon Page](https://www.amazon.es/dp/B07D4W2CY6/ref=cm_sw_em_r_mt_dp_gUF8FbYQW48NV) 1.199€ *purchased 18/09/2018*
 
@@ -49,19 +27,19 @@ EFI folder for booting macOS Catalina 10.15.7 on a MSI PL62 7RC Laptop.
 | Component | Name |
 |:--- |:---:|
 | Motherboard:  | FX504GE **HM370** |
-| CPU: | Intel i7-8750H |
+| CPU: | Intel i5-7300HQ |
 | RAM: | 16GB **SK Hyinix** HMA82GS6CJR8N-VK 2666Mhz |
 | iGPU: | Intel UHD 630 (Mobile) |
 | dGPU: | NVIDIA GeForce GTX 1050 Ti (DISABLED) |
 | NVMe: | Samsung 970 EVO Plus |
 | HDD: | HGST HTS721010A9E630 |
 | Wifi/BT: | Intel(R) Wireless-AC 9560 160MHz (Type CNVi) |
-| Audio: | RealTek ALC255 |
-| Ethernet: | Realtek RTL8111 |
+| Audio: | Intel CM238 ALC 233 |
+| Ethernet: | Atheros QCA8171 |
 | Trackpad: | ELAN1200 Precision TouchPad (Type HID) |
 | Keyboard: | Standard PS/2 Keyboard |
 
-![Asus FX504GE Layout](/Docs/Images/Guide/Asus-FX504GE-layout.png)
+![Asus FX504GE Layout](/Docs/Images/Guide/MSI-PL62-7RC-267XES-layout.png)
 These are all the external ports of the laptop. (**They all work**)
 
 ### Working
@@ -78,7 +56,9 @@ These are all the external ports of the laptop. (**They all work**)
 - [x] **Sleep/Wake:** Yes
 
 ### Not working
-- dGPU (Any support in Mojave and up).
+- Trackpad PC/2 Synaptic click (physical button and tapping) doesn't work.
+- dGPU (Any support).
+- No battery management.
 - Continuity Features (not working for now, waiting on https://openintelwireless.github.io/).
 
 
