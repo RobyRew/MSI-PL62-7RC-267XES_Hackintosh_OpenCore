@@ -1,84 +1,65 @@
-# MSI-PL62-7RC-OC-Hackintosh
+# Hackintosh Guide for **MSI PL62 7RC-267XES** and maybe similar **7RC** models
 
-EFI folder for booting macOS Catalina 10.15.7 on a MSI PL62 7RC Laptop.
-
-## Hardware Info & Specs (WIP)
-
-| Part      | Model                                    |
-| --------- | ---------------------------------------- |
-| Processor | Intel i5-7300HQ (4C4T Kaby Lake)         |
-| Memory    | DDR4 SODIMM, Supports Up to 64GB (2x 8G) |
-| Storage   | 1x SATA @ SATA 3.0                       |
-
-## Kexts, Drivers and (WIP)
-
-## Versions (WIP)
-
-# Bugs
-
-- Trackpad PC/2 Synaptic click (physical button and tapping) doesn't work (need more time to fix it).
-- No battery management (again, not enough time to do it).
-
-
-# Hackintosh Guide for **Asus FX504GE** and **GD** models
-
-**This guide it's updated to OpenCore 0.7.3 and tested on my main device.**
+**This guide it's updated to OpenCore 0.6.4 and tested on my main device.**
 <!-- shields -->
 <div>
     <!-- downloads -->
-    <a href="https://github.com/RobyRew/ASUS-FX504GE-Hackintosh_OpenCore/releases">
-        <img src="https://img.shields.io/github/downloads/RobyRew/ASUS-FX504GE-Hackintosh_OpenCore/total" alt="downloads"/>
+    <a href="https://github.com/RobyRew/MSI-PL62-7RC-267XES_Hackintosh_OpenCore/releases">
+        <img src="https://img.shields.io/github/downloads/RobyRew/MSI-PL62-7RC-267XES_Hackintosh_OpenCore/total" alt="downloads"/>
     </a>
     <!-- version -->
-    <a href="https://github.com/RobyRew/ASUS-FX504GE-Hackintosh_OpenCore/releases/latest">
-        <img src="https://img.shields.io/github/release/RobyRew/ASUS-FX504GE-Hackintosh_OpenCore.svg" alt="latest version"/>
+    <a href="https://github.com/RobyRew/MSI-PL62-7RC-267XES_Hackintosh_OpenCore/releases/latest">
+        <img src="https://img.shields.io/github/release/RobyRew/MSI-PL62-7RC-267XES_Hackintosh_OpenCore.svg" alt="latest version"/>
     </a>
     <!-- platform -->
-    <a href="https://github.com/RobyRew/ASUS-FX504GE-Hackintosh_OpenCore">
+    <a href="https://github.com/RobyRew/MSI-PL62-7RC-267XES_Hackintosh_OpenCore">
         <img src="https://img.shields.io/badge/platform-macOS-lightgrey.svg" alt="platform"/>
     </a>
 </div>
 </br></br>
 
-![Asus FX504GE running macOS Big Sur](/Docs/Images/Asus-FX504-macOS.png)
+![Asus FX504GE running macOS Big Sur](/Docs/Images/MSI-PL62-7RC-267XES-macOS.png)
 
-[Amazon Page](https://www.amazon.es/dp/B07D4W2CY6/ref=cm_sw_em_r_mt_dp_gUF8FbYQW48NV) 1.199€ *purchased 18/09/2018*
+[Amazon Page](https://www.amazon.es/MSI-PL62-7RC-267XES-Ordenador-i5-7300HQ/dp/B078ZZ4PJ1)
 
 
 ## Specs:
 | Component | Name |
 |:--- |:---:|
-| Motherboard:  | FX504GE **HM370** |
-| CPU: | Intel i7-8750H |
+| Motherboard:  | MS-16JD1 **HM170** |
+| CPU: | Intel i5-7300HQ |
 | RAM: | 16GB **SK Hyinix** HMA82GS6CJR8N-VK 2666Mhz |
-| iGPU: | Intel UHD 630 (Mobile) |
-| dGPU: | NVIDIA GeForce GTX 1050 Ti (DISABLED) |
-| NVMe: | Samsung 970 EVO Plus |
-| HDD: | HGST HTS721010A9E630 |
-| Wifi/BT: | Intel(R) Wireless-AC 9560 160MHz (Type CNVi) |
-| Audio: | RealTek ALC255 |
-| Ethernet: | Realtek RTL8111 |
-| Trackpad: | ELAN1200 Precision TouchPad (Type HID) |
-| Keyboard: | Standard PS/2 Keyboard |
+| iGPU: | Intel HD 630 (Mobile) |
+| dGPU: | NVIDIA GeForce MX150 (DISABLED) |
+| NVMe: | Silicon Motion SM2263XT |
+| HDD: | HGST HTS541010B7E610 |
+| Wifi/BT: | Intel Wireless-AC 3168NGW [Stone Peak] |
+| Audio: | Realteck ALC892 |
+| Ethernet: | Atheros QCA8171 |
+| Trackpad: | SynPS/2 Synaptics TouchPad |
+| Keyboard: | AT Translated Set 2 keyboard |
 
-![Asus FX504GE Layout](/Docs/Images/Guide/Asus-FX504GE-layout.png)
-These are all the external ports of the laptop. (**They all work**)
+![MSI PL62 7RC-267XES Layout](/Docs/Images/Guide/MSI-PL62-7RC-267XES-layout.png)
+These are all the external ports of the laptop. (**They work**)
 
 ### Working
-- [x] **Tested with macOS High Sierra, Mojave, Catalina, Big Sur, and Monterrey**
+- [x] **Tested with macOS Catalina, Big Sur, and Monterrey**
 - [x] **Wifi** (Thanks to [AirportItlwm.kext](https://github.com/OpenIntelWireless/itlwm/releases) and loading from system the kext: `IO80211Family.kext`)
 - [x] **Bluetooth:** (Thanks to [IntelBluetoothFirmware.kext](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases))
-- [x] **Audio:** Realtek ALC255 (Thanks to AppleALC.kext with layout-id=3 setted in Device Properties)
+- [x] **Audio:** Intel CM238 (Thanks to AppleALC.kext with layout-id=3 setted in Device Properties)
 - [x] **USB:** All internal and external ports (Thanks to SSDT-EC-USBX-LAPTOP.aml)
-- [x] **Ethernet:** Realtek RTL8111 (Thanks to RealtekRTL8111.kext)
-- [x] **Trackpad:** (Working thanks to VoodooI2C.kext, VoodooI2CHID.kext and SSDT-XOSI.aml)
+- [x] **Ethernet:** Atheros QCA8171 (Thanks to AtherosE2200Ethernet.kext)
+- [x] **Trackpad:** (Partially Working thanks to VoodooI2C.kext, VoodooI2CHID.kext and SSDT-XOSI.aml)
 - [x] **HDMI:** Works almost perfect. 
 - [x] **Shutdown:** Yes
 - [x] **Restart:** Yes
 - [x] **Sleep/Wake:** Yes
 
 ### Not working
-- dGPU (Any support in Mojave and up).
+- Sleep/Wake/Restart/Shutdown not all working.
+- Trackpad PC/2 Synaptic click (physical button and tapping) doesn't work.
+- dGPU (Any support).
+- No battery management.
 - Continuity Features (not working for now, waiting on https://openintelwireless.github.io/).
 
 
@@ -94,7 +75,7 @@ These are all the external ports of the laptop. (**They all work**)
 ### From macOS:
 [**Link to Apple's Guide**](https://support.apple.com/en-us/HT201372)
 
-**Download installers:** [Monterrey Beta 6](https://swcdn.apple.com/content/downloads/62/59/071-90564-A_R6Q1G2HZ2D/1rnk4tb7mtnq80a0ml1xatj8iv1hfw5ors/InstallAssistant.pkg)(Execute de .pkg to extract the installer) - [Big Sur](https://itunes.apple.com/us/app/macos-big-sur/id1526878132) - [Catalina](https://itunes.apple.com/us/app/macos-catalina/id1466841314) - [Mojave](https://itunes.apple.com/us/app/macos-mojave/id1398502828) - [High Sierra](https://itunes.apple.com/us/app/macos-high-sierra/id1246284741)
+**Download installers:** [Monterrey Beta 10](http://swcdn.apple.com/content/downloads/21/10/002-17762-A_GUNYNIZ0PW/witdqh4bei493fvgin01qavvy1dfhcb87w/InstallAssistant.pkg)(Execute de .pkg to extract the installer) - [Big Sur](https://itunes.apple.com/us/app/macos-big-sur/id1526878132) - [Catalina](https://itunes.apple.com/us/app/macos-catalina/id1466841314) - [Mojave](https://itunes.apple.com/us/app/macos-mojave/id1398502828) - [High Sierra](https://itunes.apple.com/us/app/macos-high-sierra/id1246284741)
 
 1. Connect a >=16 GB pendrive.
 2. Open *Disk Utility* and Erase the USB with the name: *MyVolume*.
@@ -119,7 +100,7 @@ These are all the external ports of the laptop. (**They all work**)
 ---
 
 # BIOS Settings:
-- Make Sure you have [Latest BIOS v320](https://www.asus.com/supportonly/ASUS%20TUF%20GAMING%20FX504/HelpDesk_Download/)
+- Make Sure you have [Latest BIOS v*E16JDIMS.10F*](https://es.msi.com/Content-Creation/support/PL62-7RC#down-bios)
 - After Updating the BIOS, stock configuration works, so don't worry about this part.
 
 ---
@@ -138,7 +119,7 @@ These are all the external ports of the laptop. (**They all work**)
 
 ---
 
-# Post Install (Important!!)
+# Post Install
 Open Terminal.app and run those commands:
 ```bash
 sudo rm /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist
@@ -165,9 +146,7 @@ https://browser.geekbench.com/v5/cpu/5707123
 
 [Dortania](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/coffee-lake.html#starting-point) (Guide)
 
-[PoomSmart](https://github.com/PoomSmart/ASUS-FX504GE-Hackintosh) (Some ideas for my build)
-
-[MegaStood](https://github.com/MegaStood/Hackintosh-FX504GE-ES72) (Properties and boot argument for HDMI output)
+[juanlatorre](https://github.com/juanlatorre/MSI-PL62-7RC-OC-Hackintosh) (EFI Base)
 
 ---
 

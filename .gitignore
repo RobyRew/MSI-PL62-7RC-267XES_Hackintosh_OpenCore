@@ -1,2 +1,12 @@
+<<<<<<< HEAD
 .DS_STORE
 *.plist
+=======
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+._*
+opencore-*.txt
+.DS_Store
+>>>>>>> 2412d872883591feba064969d5fa1c84a1eb5edc
