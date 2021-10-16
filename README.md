@@ -18,7 +18,7 @@
 </div>
 </br></br>
 
-![Asus FX504GE running macOS Big Sur](/Docs/Images/MSI-PL62-7RC-267XES-macOS.png)
+![Asus FX504GE running macOS Big Sur](#/Docs/Images/MSI-PL62-7RC-267XES-macOS.png)
 
 [Amazon Page](https://www.amazon.es/MSI-PL62-7RC-267XES-Ordenador-i5-7300HQ/dp/B078ZZ4PJ1)
 
@@ -39,7 +39,7 @@
 | Trackpad: | SynPS/2 Synaptics TouchPad |
 | Keyboard: | AT Translated Set 2 keyboard |
 
-![MSI PL62 7RC-267XES Layout](/Docs/Images/Guide/MSI-PL62-7RC-267XES-layout.png)
+![MSI PL62 7RC-267XES Layout](#/Docs/Images/Guide/MSI-PL62-7RC-267XES-layout.png)
 These are all the external ports of the laptop. (**They work**)
 
 ### Working
@@ -129,11 +129,11 @@ sudo rm /Library/Preferences/SystemConfiguration/preferences.plist
 
 # BenchMarks:
 #### Cinebench R23:
-![Cinebench R23](/Docs/Images/Benchmarks/Cinebench_R23.png)
+![Cinebench R23](/#Docs/Images/Benchmarks/Cinebench_R23.png)
 
 #### GeekBench 5:
-![GeekBench 5_CPU Score](/Docs/Images/Benchmarks/GeekBench5_CPU.png)
-![GeekBench 5_GPU Score](/Docs/Images/Benchmarks/GeekBench5_GPU.png)
+![GeekBench 5_CPU Score](#/Docs/Images/Benchmarks/GeekBench5_CPU.png)
+![GeekBench 5_GPU Score](#/Docs/Images/Benchmarks/GeekBench5_GPU.png)
 https://browser.geekbench.com/v5/cpu/5707123
 
 ---
