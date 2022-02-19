@@ -1,6 +1,6 @@
 # Hackintosh Guide for **MSI PL62 7RC-267XES** and maybe similar **7RC** models
 
-**This guide it's updated to OpenCore 0.6.4 and tested on my main device.**
+**This guide it's updated to OpenCore 0.7.8 and tested on my main device.**
 <!-- shields -->
 <div>
     <!-- downloads -->
